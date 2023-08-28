@@ -495,40 +495,49 @@ Storage Optimized Instances
 Accelerated Computing Instances
 
 3. ######################differnce s3 and EC2############################################
-Amazon Simple Storage Service (S3) and Amazon Elastic Compute Cloud (EC2) are two major storage services for AWS. S3 provide block level storge service and ec2 provide compute service.
+Amazon Simple Storage Service (S3) and Amazon Elastic Compute Cloud (EC2) are two major storage services for AWS.
+S3 provide block level storge service and ec2 provide compute service.
 
 4. ##########################################S3#####################################################
-S3 is object storage service designed for incredible durability, high scalability, availability, security, and performance. It has various storage classes for different use cases
+S3 is object storage service designed for incredible durability, high scalability, availability, security, and performance.
+ It has various storage classes for different use cases
 
 5. Amazon Glacier- It is an extremely low-cost storage service. It offers secure and fast storage for data archiving and backup.
 
 6. ###############################Route 53###########################################
 
-Route 53 is an advanced, highly available, and scalable DNS Service. it provide various routing types like GeoDNS, Geoproximity, and Latency Based Routing. Together with health checks and DNS failover, this enables different fault-tolerant low-latency architectures configurable with a simple visual editor.
+Route 53 is an advanced, highly available, and scalable DNS Service. it provide various routing types like GeoDNS, Geoproximity,
+and Latency Based Routing. Together with health checks and DNS failover, this enables different fault-tolerant low-latency
+architectures configurable with a simple visual editor.
 
 7. ######################Amazon VPC (Virtual Private Cloud)#################
-VPC is logically isolated virtual networks inside AWS. You have full control over the configuration of the network, its subnets, and routing tables.
+VPC is logically isolated virtual networks inside AWS. You have full control over the configuration of the network, its subnets,
+ and routing tables.
 
 8. #########################Amazon EBS (Elastic Block Storage)##################################
-EBS is generic long-term high-performance block storage for EC2 instances. It’s designed for both throughput and transactional workloads and can scale to petabytes of data.
+EBS is generic long-term high-performance block storage for EC2 instances. It’s designed for both throughput and transactional
+ workloads and can scale to petabytes of data.
 
 9. Amazon Elastic Container Service (Amazon ECS) is a highly scalable, fast container management service that makes it easy to run, stop, and manage containers on a cluster. ECS comes with two launch types: EC2 and Fargate.
-EKS (Elastic Container Service for Kubernetes)- The tool allows you to Kubernetes on Amazon cloud environment without installation.
+9A. EKS (Elastic Container Service for Kubernetes)- The tool allows you to Kubernetes on Amazon cloud environment without installation.
 
-10. IAM (Identity and Access Management)— IAM is a secure cloud security service which helps you to manage users, assign policies, form groups to manage multiple users.
+10. IAM (Identity and Access Management)— IAM is a secure cloud security service which helps you to manage users, assign policies,
+form groups to manage multiple users.
 
 11. Amazon RDS- This Database AWS service is easy to set up, operate, and scale a relational database in the cloud.
 
 12. AWS Auto Scaling— The service allows you to automatically scale your resources up and down based on metrics.
 
-13. Amazon CloudWatch: The tools monitor AWS resources like Amazon EC2 and Amazon RDS DB Instances. It also allows you to monitor custom metrics created by user’s applications and services.
+13. Amazon CloudWatch: The tools monitor AWS resources like Amazon EC2 and Amazon RDS DB Instances. It also allows you to monitor
+ custom metrics created by user’s applications and services.
 
 14. AWS Lambda is an event-driven, serverless computing service that lets you run code without provisioning or managing servers.
 
 What is AMI in AWS EC2?
 Instances and AMIs - Amazon Elastic Compute Cloud
 
-15. An Amazon Machine Image (AMI) is a template that contains a software configuration (for example, an operating system, an application server, and applications)
+15. An Amazon Machine Image (AMI) is a template that contains a software configuration (for example, an operating system, an
+ application server, and applications)
 
 16. IgW allows both inbound and outbound access to the internet whereas the NAT Gateway only allows outbound access.
 
@@ -563,3 +572,19 @@ https://www.tecmint.com/mysql-backup-and-restore-commands-for-database-administr
 https://www3.ntu.edu.sg/home/ehchua/programming/sql/MySQL_Beginner.html
 
 ```
+```
+####################### Monitering##########################
+
+Zabbix is an open-source software tool to monitor IT infrastructure such as networks, servers, virtual machines, and cloud services.
+Zabbix collects and displays basic metrics. The Zabbix monitoring tool is used to provide monitoring metrics and monitor network usage, disk space consumption, and CPU load. (LAMP +zabbix)
+```
+```
+Prometheus is a free software application used for event monitoring and alerting. It records metrics in a time series database built using an HTTP pull model, with flexible queries and real-time alerting.
+
+```
+```
+Grafana is a multi-platform open source analytics and interactive visualization web application. It provides charts, graphs, and alerts for the web when connected to supported data sources.
+https://www.projectpro.io/compare/prometheus-vs-zabbix
+```
+
+
