@@ -127,13 +127,14 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword  # default password path
 CI vs CD: Continuous Integration (CI) is an approach of testing each change to codebase automatically, whereas Continuous Delivery (CD) is an approach to obtain changes of new features, configuration, and bug fixes.
 
 Continuous Integration is a software development method where team members integrate their work at least once a day.
-Continuous deployment: - Continuous deployment goes one step further than continuous delivery. Continuous Deployment ensures that any change that passes through the stages of production is released to the end-users.
+Continuous deployment: - Continuous deployment goes one step further than continuous delivery.
+Continuous Deployment ensures that any change that passes through the stages of production is released to the end-users.
 
 development without CI vs. Development with CI
 Here are key differences between development using CI or without CI:
-Development without CI	Development with CI
+Development without CI	       Development with CI
 Lots of Bugs	                Fewer bugs
-Infrequent commits	        Regular commits
+Infrequent commits	            Regular commits
 Infrequent and slow releases	Regular working releases
 Difficult integration	        Easy and Effective Integration
 Testing happens late	        Continuous Integration testing happens early and often.
@@ -143,11 +144,11 @@ Poor project visibility	        Better project visibility
 
 
 #Types of jobs or projects, New Build in Jenkins
-•	Freestyle project. Jenkins freestyle projects allow users to automate simple jobs. 
-•	Maven project.
-•	Pipeline.
-•	Multibranch pipeline.
-•	External Job.
+1	Freestyle project. #Jenkins freestyle projects allow users to automate simple jobs. 
+2	Maven project.
+3	Pipeline.
+4	Multibranch pipeline.
+5	External Job.
 
 Jenkinsfile offers two types of syntax to create pipelines: declarative and scripted.
 
@@ -191,7 +192,7 @@ pipeline {
     }
 
 }
-•	Scripted. A scripted pipeline uses the Groovy (JVM-based) language to create a pipeline as code.
+#	Scripted. A scripted pipeline uses the Groovy (JVM-based) language to create a pipeline as code.
 •	
           Jenkinsfile (Scripted Pipeline)
 •	
@@ -251,7 +252,7 @@ Login Jenkins -- Manage Jenkins---
 
 ```
 ```
-############################ ssh-server and password less configration#################################
+############################ ssh-server configration for cloud to enable user authictication with password ######################
 yum install ssh-server
 /etc/ssh/sshd_config
 PasswordAuthentication and PermitRootLogin   # uncomment line
@@ -271,7 +272,7 @@ ssh-copy-id 192.168.1.3  # copied public in client machine
 ssh ansible@192.168.1.3
 ```
 ```
-#########################ansible ###############################
+#########################Ansible ###############################
 
 http://www.datadisk.co.uk/html_docs/ansible/ansible_cheatsheet.html
 https://www.golinuxcloud.com/ansible-cfg/
@@ -287,7 +288,7 @@ Default inventory file = /etc/ansible/hosts
 
 
 
-Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
+# Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
 
 
 #############inventory##########################################
@@ -389,20 +390,26 @@ https://www.geeksforgeeks.org/difference-between-terraform-vs-ansible/
 What is the difference between Ansible and Terraform?
 
  Differentiate between Terraform and Ansible.
-Answer: Ansible is a deceptively simple IT automation tool. Configuration management, application deployment, cloud provisioning, ad-hoc job execution, network automation, and multi-node orchestration are all handled by this software. Ansible simplifies complex changes such as zero-downtime rolling updates with load balancers. The following table compares and contrasts Ansible and Terraform:
-Terraform	                                                 Ansible
+Answer: Ansible is a deceptively simple IT automation tool. Configuration management, application deployment, cloud provisioning, ad-hoc job execution, network automation, and multi-node orchestration are all handled by this software. Ansible simplifies complex changes such as zero-downtime rolling updates with load balancers.
+```
+
+The following table compares and contrasts Ansible and Terraform:
+Terraform	                                                   Ansible
 Terraform is a tool for provisioning.	                       Ansible is a tool for managing configurations.
-It uses a declarative Infrastructure as Code methodology.	It takes a procedural method.
-It’s ideal for orchestrating cloud services and building cloud infrastructure from the ground up.	It is mostly used to configure servers with the appropriate software and to update resources that have previously been configured.
+It uses a declarative Infrastructure as Code methodology.	   It takes a procedural method.
+It’s ideal for orchestrating cloud services and building cloud
+infrastructure from the ground up.                           	It is mostly used to configure servers with the appropriate software and to update resources that have previously been configured.
 By default, Terraform does not allow bare metal provisioning.	The provisioning of bare metal servers is supported by Ansible.
-In terms of packing and templating, it does not provide better support.	It includes complete packaging and templating support.
-It is strongly influenced by lifecycle or state management.	It doesn’t have any kind of lifecycle management. It does not store the state.
+In terms of packing and templating, it does not provide better support. 	It includes complete packaging and templating support.
+It is strongly influenced by lifecycle or state management.   	It doesn’t have any kind of lifecycle management. It does not store the state.
 
 
-These two tools help in automating configurations and deploying infrastructure. 
-Terraform offers to deploy Infrastructure as a Code, helps in readability and lift and shift deployments. Ansible is a configuration management tool for automating system configuration and management
+These two tools help in automating configurations and deploying infrastructure. (ANSIBLE, TERRAFORM)
+Terraform offers to deploy Infrastructure as a Code, helps in readability and lift and shift deployments. 
 
 Terraform provides a mechanism to manage the status of infrastructure resources and handles the whole lifecycle of those resources, from creation to deletion. Ansible focuses on configuring and maintaining already-existing systems rather than managing the entire lifecycle.
+```
+Ansible is a configuration management tool for automating system configuration and management
 Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
 ```
 ```
@@ -486,6 +493,7 @@ Compute Optimized Instances
 Memory-Optimized Instances
 Storage Optimized Instances
 Accelerated Computing Instances
+
 3. ######################differnce s3 and EC2############################################
 Amazon Simple Storage Service (S3) and Amazon Elastic Compute Cloud (EC2) are two major storage services for AWS. S3 provide block level storge service and ec2 provide compute service.
 
@@ -508,28 +516,33 @@ EBS is generic long-term high-performance block storage for EC2 instances. It’
 EKS (Elastic Container Service for Kubernetes)- The tool allows you to Kubernetes on Amazon cloud environment without installation.
 
 10. IAM (Identity and Access Management)— IAM is a secure cloud security service which helps you to manage users, assign policies, form groups to manage multiple users.
+
 11. Amazon RDS- This Database AWS service is easy to set up, operate, and scale a relational database in the cloud.
+
 12. AWS Auto Scaling— The service allows you to automatically scale your resources up and down based on metrics.
+
 13. Amazon CloudWatch: The tools monitor AWS resources like Amazon EC2 and Amazon RDS DB Instances. It also allows you to monitor custom metrics created by user’s applications and services.
+
 14. AWS Lambda is an event-driven, serverless computing service that lets you run code without provisioning or managing servers.
 
 What is AMI in AWS EC2?
 Instances and AMIs - Amazon Elastic Compute Cloud
+
 15. An Amazon Machine Image (AMI) is a template that contains a software configuration (for example, an operating system, an application server, and applications)
 
 16. IgW allows both inbound and outbound access to the internet whereas the NAT Gateway only allows outbound access.
+
 17. NAT gateway gives cloud resources without public IP addresses access to the internet without exposing those resources to incoming internet connections
 
-18. Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets, and routes traffic only to the healthy targets. 
-Application Load Balancers, Network Load Balancers, Gateway Load Balancers, and Classic Load Balancers.
+18. Elastic Load Balancing automatically distributes your incoming traffic across multiple targets, such as EC2 instances, containers, and IP addresses, in one or more Availability Zones. It monitors the health of its registered targets, and routes traffic only to the healthy targets. Application Load Balancers, Network Load Balancers, Gateway Load Balancers, and Classic Load Balancers.
+
 19. A security group acts as a firewall that controls the traffic allowed to and from the resources in your virtual private cloud (VPC).
 
 ```
 ```
 #################################DATABASE#################################
 There are two types of SQL databases: relational (SQL) and non-relational (NoSQL)
-Relational Database Service (Amazon RDS)
-MySQL, PostgreSQL
+Relational Database Service (Amazon RDS) exm. MySQL, PostgreSQL
 
 sudo grep "A temporary password" /var/log/mysqld.log
 
@@ -538,11 +551,15 @@ mysql_secure_installation  #Config the MySQL root user
 mysql -u root -p  # Log in to MySQL
 
 CREATE DATABASE example_database;  # create database with name example_database
+
 CREATE USER 'example_user'@'%' IDENTIFIED BY 'password';  # user for example_database database
+
 GRANT ALL ON example_database.* TO 'example_user'@'%'; # Now give this user permission over the example_database database:
+
 CREATE TABLE example_database.breakfastMenu(food VARCHAR(50), description VARCHAR(255));  #Create a breakfastMenu table in the testDB
 
-https://www.tecmint.com/mysql-backup-and-restore-commands-for-database-administration/ 
+https://www.tecmint.com/mysql-backup-and-restore-commands-for-database-administration/
+
 https://www3.ntu.edu.sg/home/ehchua/programming/sql/MySQL_Beginner.html
 
 ```
