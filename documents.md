@@ -56,7 +56,11 @@ git status: To know the comparison between the working directories and index.
 Q1 Can you tell the difference between git pull and git fetch?
 Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository. (Git pull = git fetch + git merge)
 
-Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch, it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want to reflect these changes in your target branch, git fetch must be followed with a git merge.
+
+Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch,
+ it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want
+ to reflect these changes in your target branch, git fetch must be followed with a git merge.
+
 
 Q2 What is origin in Git?
 Origin refers to the remote repository that a project was originally cloned from and is used instead of the original repository’s URL.
