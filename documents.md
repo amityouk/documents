@@ -3,16 +3,24 @@ https://www.simplilearn.com/tutorials/devops-tutorial/devops-tools#devops_monito
 
 1. Version Control Tool: Git (GitLab, GitHub, Bitbucket)
 2. Build Tool: Maven or ant or Gradle
-3. Continuous Integration Tool: Jenkins or gitLabcI/CD
+3. Continuous Integration Tool: Jenkins or Gitlab CI/CD
 4.Configuration Management Tool: Ansible or puppet
-5. Container Platforms: Docker or  Linux Daemon (LXD)
-6. Container Platforms: Kubernetes or docker swarm
-7. Communication and Collaboration: Slack or Ms teams
-8.Testing Tool: Selenium
-9. Terraform  or  Pulumi
-10. mysql or mariadb
-11. grafana and promothiues
-12. python
+5. Communication and Collaboration: Slack or Ms teams
+6.Testing Tool: Selenium
+7. Terraform  or  Pulumi
+8. mysql or mariadb
+9. grafana and promothiues
+10. sonarqube
+11. nexus
+12. Linux or window os
+13. cloud aws/azure/googlecloud
+14. python
+```
+```
+15. Container Platforms: Docker or podman or Linux Daemon (LXD)
+16. docker compose
+17. Container Platforms: Kubernetes or docker swarm
+
 ```
 ```
 
@@ -163,15 +171,23 @@ https://www.devopsschool.com/blog/maven-tutorials-maven-lifecycle-phases-goal/
 ```
 ```
 ##########################################Jenkins#############################
+```
+```
+Jenkins master ----jenkins salve architecture
+The Jenkins master acts to schedule the jobs, assign slaves, and send builds to slaves to execute the jobs.
 
-
+Jenkins server cannot handle multiple builds simultaneously for this, the Master distributes the workload and allows us
+to run different builds on different environments each called a Slave.
+```
+```
 Jenkins is an open source automation server. It helps automate the parts of software development related to building,
  testing, and deploying,facilitating continuous integration and continuous delivery.it is written in Java programming
  language. default port 8080.
 
 CI tools like Jenkins, TeamCity, Bamboo, GitLab, etc.
 
-Jenkins Plugins: Plugins are the primary means of enhancing the functionality of a Jenkins. There are thousands of plugins available in Jenkins.
+Jenkins Plugins: Plugins are the primary means of enhancing the functionality of a Jenkins. There are thousands of plugins
+ available in Jenkins.
 
 1) Git plugin for Jenkins. ...
 2) Mailer Plugin ...
@@ -195,7 +211,9 @@ Add time schedule in the Schedule field, for example: @midnight.
 
 Q3 
 What is the difference between poll SCM and build periodically?
-Builds Periodically triggers builds as per the schedule (every 10 minutes) even if you haven't changed anything. Poll SCM will check for changes before triggering any build, if there are changes to the previous version there only build will be triggered. Builds Periodically is not recommended
+Builds Periodically triggers builds as per the schedule (every 10 minutes) even if you haven't changed anything. Poll SCM will
+ check for changes before triggering any build, if there are changes to the previous version there only build will be triggered.
+ Builds Periodically is not recommended
 
 Q4 How many slaves we can connect to master in Jenkins?
 I recommend 1-200 agents per master as a practical maximum
@@ -237,7 +255,8 @@ Jenkinsfile is a text file that contains the definition of a Jenkins Pipeline an
 
 Jenkinsfile offers two types of syntax to create pipelines: declarative and scripted.
 
-•	Declarative. Declarative Pipeline is a relatively recent addition to Jenkins Pipeline which presents a more simplified and opinionated syntax on top of the Pipeline sub-systems.
+•	Declarative. Declarative Pipeline is a relatively recent addition to Jenkins Pipeline which presents a more simplified and
+ opinionated syntax on top of the Pipeline sub-systems.
 pipeline {
 
     agent any 
@@ -373,11 +392,13 @@ Default inventory file = /etc/ansible/hosts
 
 
 
-# Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
+# Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes
+ software provisioning, configuration management, and application deployment functionality.
 
 
 #############inventory##########################################
-An Ansible inventory file is a text file consisting of host names and IP addresses of remote servers that stores the information of the target system where the Ansible script will be executed.
+An Ansible inventory file is a text file consisting of host names and IP addresses of remote servers that stores the information
+of the target system where the Ansible script will be executed.
 
 There are two types of Ansible inventories, depending on host management:
 Static inventories.
@@ -392,13 +413,15 @@ ansible web -m ping  -b -K
 A playbook is a list of plays.
 
 ##################################Playbook ##########################################
-Ansible Playbooks is a yml file. In playbook written some tasks with help of module and command. When we run playbook all task that automatically execute against hosts.
+Ansible Playbooks is a yml file. In playbook written some tasks with help of module and command. When we run playbook
+all task that automatically execute against hosts.
 
 ansible-playbook httpd.yml -kK  # k ask user password and K ask sudo password 
 ansible-playbook --syntax-check on all playbooks
 Using the --limit parameter of the ansible-playbook command is the easiest option to limit
 ###########Playbook work#################################
-Playbooks are collections of one or more plays that are performed in a certain order. A play is an ordered sequence of tasks performed against hosts from your inventory.
+Playbooks are collections of one or more plays that are performed in a certain order. A play is an ordered sequence of tasks
+ performed against hosts from your inventory.
 The role is the primary mechanism for breaking a playbook into multiple files. This simplifies writing complex playbooks, 
 and it makes them easier to reuse. The breaking of playbook allows you to logically break the playbook into reusable components.
 
@@ -437,8 +460,8 @@ terraform apply --auto-approve #apply changes without being prompted to enter "y
 terraform destroy --auto-approve #destroy/cleanup deployment without being prompted for “yes”
 terraform plan -out plan.out #output the deployment plan to plan.out.
 
-terraform refresh — Modify the state file with updated metadata containing information on the resources being managed in Terraform. Will not modify your infrastructure
-terraform show — Show the state file in a human-readable format.
+terraform refresh — Modify the state file with updated metadata containing information on the resources being managed in Terraform.
+ Will not modify your infrastructure terraform show — Show the state file in a human-readable format.
 
 
 Q1. Define Modules in Terraform?
@@ -467,15 +490,17 @@ Containers are more lightweight compared to virtual machines (VM). Containers sh
 
 #############################docker hub and git different####################################
 
-Docker Hub is primarily used for storing and sharing Docker images Docker Hub allows developers to build, test, and deploy Docker images
-while GitHub is used for version control and collaboration.
+Docker Hub is primarily used for storing and sharing Docker images Docker Hub allows developers to build, test, and deploy
+ Docker images while GitHub is used for version control and collaboration.
 
 ################Different terraform and Ansible ##############
 https://www.geeksforgeeks.org/difference-between-terraform-vs-ansible/
 What is the difference between Ansible and Terraform?
 
  Differentiate between Terraform and Ansible.
-Answer: Ansible is a deceptively simple IT automation tool. Configuration management, application deployment, cloud provisioning, ad-hoc job execution, network automation, and multi-node orchestration are all handled by this software. Ansible simplifies complex changes such as zero-downtime rolling updates with load balancers.
+Answer: Ansible is a deceptively simple IT automation tool. Configuration management, application deployment, cloud provisioning,
+ ad-hoc job execution, network automation, and multi-node orchestration are all handled by this software. Ansible simplifies
+complex changes such as zero-downtime rolling updates with load balancers.
 ```
 
 The following table compares and contrasts Ansible and Terraform:
@@ -492,7 +517,8 @@ It is strongly influenced by lifecycle or state management.   	It doesn’t have
 These two tools help in automating configurations and deploying infrastructure. (ANSIBLE, TERRAFORM)
 Terraform offers to deploy Infrastructure as a Code, helps in readability and lift and shift deployments. 
 
-Terraform provides a mechanism to manage the status of infrastructure resources and handles the whole lifecycle of those resources, from creation to deletion. Ansible focuses on configuring and maintaining already-existing systems rather than managing the entire lifecycle.
+Terraform provides a mechanism to manage the status of infrastructure resources and handles the whole lifecycle of those resources, 
+from creation to deletion. Ansible focuses on configuring and maintaining already-existing systems rather than managing the entire lifecycle.
 ```
 Ansible is a configuration management tool for automating system configuration and management
 Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes software provisioning, configuration management, and application deployment functionality.
@@ -506,7 +532,8 @@ create network
 create storge
 
 
-Docker Hub is primarily used for storing and sharing Docker images. Docker Hub allows developers to build, test, and deploy Docker images
+Docker Hub is primarily used for storing and sharing Docker images. Docker Hub allows developers to build, test, and deploy Docker
+ images.
 
 Docker is a software platform that allows you to build, test, and deploy applications quickly.
 
