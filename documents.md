@@ -1,4 +1,63 @@
+```
+https://www.simplilearn.com/tutorials/devops-tutorial/devops-tools#devops_monitoring_tools
 
+1. Version Control Tool: Git (GitLab, GitHub, Bitbucket)
+2. Build Tool: Maven or ant or Gradle
+3. Continuous Integration Tool: Jenkins or gitLabcI/CD
+4.Configuration Management Tool: Ansible or puppet
+5. Container Platforms: Docker or  Linux Daemon (LXD)
+6. Container Platforms: Kubernetes or docker swarm
+7. Communication and Collaboration: Slack or Ms teams
+8.Testing Tool: Selenium
+9. Terraform  or  Pulumi
+10. mysql or mariadb
+11. grafana and promothiues
+12. python
+```
+```
+
+Waterfall is best used on software development projects that are well defined, predictable and unlikely to significantly change.
+This usually applies to simpler, small-scale projects.Its sequential nature makes it largely unresponsive to adjustments, so budget
+and delivery timelines will be affected when business requirements change during the development cycle.It is tradtional method.
+
+```
+```
+Agile methods are based on iterative, incremental development that rapidly delivers a viable business product. Incremental development breaks the product into smaller pieces, building some of it, assessing and adapting.
+
+```
+```
+• What is DevOps
+
+DevOps is a combination of software development (dev) and operations (ops). (dev+OPS)
+DevOps is a software development approach emphasizing collaboration, automation, and continuous delivery to
+provide high-quality products to customers quickly and efficiently.
+
+Benefits of DevOps
+Faster, better product delivery.
+Faster issue resolution and reduced complexity.
+Greater scalability and availability.
+More stable operating environments.
+Better resource utilization.
+Greater automation.
+Greater visibility into system outcomes.
+Greater innovation.
+
+DevOps Stages
+DevOps follows positive techniques that consist of code, building, testing, releasing, deploying, operating,
+displaying, and planning. DevOps lifecycle follows a range of phases such as non-stop development, 
+non-stop integration, non-stop testing, non-stop monitoring, and non-stop feedback.
+
+DevOps Lifecycle
+What are the 7 C's of DevOps?
+DevOps lifecycle phases: the 7Cs of DevOps lifecycle
+Continuous development.
+Continuous integration.
+Continuous testing.
+Continuous deployment.
+Continuous feedback.
+Continuous monitoring.
+Continuous operations.
+```
 ```
 #########################################################################
 
@@ -21,6 +80,8 @@ Features of Git
  Distributed development.
 
 Git repositories are managed through GitHub's cloud-based service.
+GitHub is a code hosting platform for version control and collaboration.
+
 yum install git
 git --version
 
@@ -28,6 +89,7 @@ There are 3 stages of a file
 •	untracked - files have not been added to the Git repository
 •	staged - files that have been added to Git repository or existing files that have had changes
 •	committed - we commit the changes to the Git repository
+
 There are four areas of git
 •	working directory - untracked files
 •	staging area - files/directories that have been added to Git using the add command (also known as index area)
@@ -55,7 +117,6 @@ git status: To know the comparison between the working directories and index.
 
 Q1 Can you tell the difference between git pull and git fetch?
 Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository. (Git pull = git fetch + git merge)
-
 
 Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch,
  it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want
@@ -104,8 +165,9 @@ https://www.devopsschool.com/blog/maven-tutorials-maven-lifecycle-phases-goal/
 ##########################################Jenkins#############################
 
 
-Jenkins is an open source automation server. It helps automate the parts of software development related to building, testing, and deploying,
-facilitating continuous integration and continuous delivery.it is written in Java programming language. default port 8080.
+Jenkins is an open source automation server. It helps automate the parts of software development related to building,
+ testing, and deploying,facilitating continuous integration and continuous delivery.it is written in Java programming
+ language. default port 8080.
 
 CI tools like Jenkins, TeamCity, Bamboo, GitLab, etc.
 
@@ -142,7 +204,8 @@ Q5 A Jenkins slave node is simply a device configured to act as an automation ex
 
 sudo vi /etc/default/Jenkins  #8081 # change port 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword  # default password path
-
+```
+```
 CI vs CD: Continuous Integration (CI) is an approach of testing each change to codebase automatically, whereas Continuous Delivery (CD) is an approach to obtain changes of new features, configuration, and bug fixes.
 
 Continuous Integration is a software development method where team members integrate their work at least once a day.
@@ -160,7 +223,8 @@ Testing happens late	        Continuous Integration testing happens early and of
 Issue raised are harder to fix	Find and fix problems faster and more efficiently.
 Poor project visibility	        Better project visibility
 
-
+```
+```
 
 #Types of jobs or projects, New Build in Jenkins
 1	Freestyle project. #Jenkins freestyle projects allow users to automate simple jobs. 
@@ -168,6 +232,8 @@ Poor project visibility	        Better project visibility
 3	Pipeline.
 4	Multibranch pipeline.
 5	External Job.
+
+Jenkinsfile is a text file that contains the definition of a Jenkins Pipeline and is checked into source control.
 
 Jenkinsfile offers two types of syntax to create pipelines: declarative and scripted.
 
