@@ -531,6 +531,40 @@ create machine
 create network
 create storge
 
+```
+There are four components that we will discuss in this Docker tutorial:
+Docker client and server 
+Docker image 
+Docker registry 
+Docker container
+
+How Does Docker Work?
+Docker works via a Docker engine that is composed of two key elements:
+a server and a client; and the communication between the two is via REST API. The server communicates the instructions to the client
+
+https://geekflare.com/docker-commands/   # command list
+
+```
+```
+What are disadvantages of Docker?
+Disadvantage of Dockers
+Docker is not good for application that requires rich GUI.
+It is difficult to manage large amount of containers.
+Docker does not provide cross-platform compatibility means if an application is designed to run in a Docker 
+container on windows, then it cannot run on Linux Docker container.
+
+    #############Virtual Machine Vs Docker#############
+
+Narration	                                         Virtual                 Machine	Docker
+Infrastructure Management                           Hypervisor Layer         Docker Engine layer
+Memory Usage                                        Very high                       Very low
+Memory Reallocation                              Not possible                Unused memory can be reallocated to other containers
+Performance        As virtual machines increase, the performance decreases  As Docker uses a single engine, the performance is high, regardless of the increase in containers
+Boot Time                                         VMs take time to boot          Docker containers take milliseconds to boot on.
+Portability     Virtual machines depend on the Host OS, libraries and dependencies. So, portability is a challenge  Docker is highly portable
+
+
+```
 
 Docker Hub is primarily used for storing and sharing Docker images. Docker Hub allows developers to build, test, and deploy Docker
  images.
