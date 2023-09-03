@@ -4,7 +4,22 @@
 
 Differences Between Git and GitHub ( Bigbuket, Gitlab)
 
-Git version control system facilitates the management and tracking of source code histories. 
+
+Git is  distributed version control system facilitates the management and tracking of source code histories.
+
+Types of Version Control System :
+There are two types of version control: centralized(SVN) and distributed.
+
+Features of Git
+ Tracks history.
+ Free and open source.
+ Supports non-linear development.
+ Creates backups.
+ Scalable.
+ Supports collaboration.
+ Branching is easier.
+ Distributed development.
+
 Git repositories are managed through GitHub's cloud-based service.
 yum install git
 git --version
