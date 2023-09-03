@@ -15,12 +15,23 @@ https://www.simplilearn.com/tutorials/devops-tutorial/devops-tools#devops_monito
 12. Linux or window os
 13. cloud aws/azure/googlecloud
 14. python
+15. tomcat ,httpd, nginx
 ```
 ```
-15. Container Platforms: Docker or podman or Linux Daemon (LXD)
-16. docker compose
-17. Container Platforms: Kubernetes or docker swarm
+A. Container Platforms: Docker or podman or Linux Daemon (LXD)
+B. Docker compose
+C. Container Platforms: Kubernetes or docker swarm
 
+```
+```
+Benefits of Linux
+Free and Open Source OS.
+Secure and Reliable.
+Easy to Install, System Updation.
+Lightweight.
+Flexible.
+Various Linux Distributions.
+Large Community Support.
 ```
 ```
 
@@ -30,7 +41,8 @@ and delivery timelines will be affected when business requirements change during
 
 ```
 ```
-Agile methods are based on iterative, incremental development that rapidly delivers a viable business product. Incremental development breaks the product into smaller pieces, building some of it, assessing and adapting.
+Agile methods are based on iterative, incremental development that rapidly delivers a viable business product. Incremental development breaks the product into smaller
+ pieces, building some of it, assessing and adapting.
 
 ```
 ```
@@ -87,6 +99,7 @@ Features of Git
  Branching is easier.
  Distributed development.
 
+####################Github########################################
 Git repositories are managed through GitHub's cloud-based service.
 GitHub is a code hosting platform for version control and collaboration.
 
@@ -221,7 +234,7 @@ I recommend 1-200 agents per master as a practical maximum
 Q5 A Jenkins slave node is simply a device configured to act as an automation executor on behalf of the master.The master will continue to perform basic operations and serve the user interface, while the slaves do the heavy lifting. 
 
 sudo vi /etc/default/Jenkins  #8081 # change port 
-sudo cat /var/lib/jenkins/secrets/initialAdminPassword  # default password path
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword  # default password path it hsow first time
 ```
 ```
 CI vs CD: Continuous Integration (CI) is an approach of testing each change to codebase automatically, whereas Continuous Delivery (CD) is an approach to obtain changes of new features, configuration, and bug fixes.
@@ -385,11 +398,14 @@ https://www.middlewareinventory.com/blog/ansible-ad-hoc-commands/
 
 ANSIBLE_CFG: This environment variable is used, provided it is set
 ansible.cfg: This is located in the current directory.
-~/.ansible.cfg: This is located in the user's home directory
-/etc/ansible/ansible.cfg # main confirmation file of ansible 
-log_path = /var/log/ansible.log
-Default inventory file = /etc/ansible/hosts
 
+~/.ansible.cfg: This is located in the user's home directory
+
+/etc/ansible/ansible.cfg # main confirmation file of ansible
+
+log_path = /var/log/ansible.log
+
+Default inventory file = /etc/ansible/hosts
 
 
 # Ansible is a suite of software tools that enables infrastructure as code. It is open-source and the suite includes
@@ -401,12 +417,13 @@ An Ansible inventory file is a text file consisting of host names and IP address
 of the target system where the Ansible script will be executed.
 
 There are two types of Ansible inventories, depending on host management:
-Static inventories.
+Static inventories-- it is divided 2 sub category (A)-default /etc/hosts and (B)custom inventory 
 Dynamic inventories.
 
 ###########################Ad hoc command#######################
 
-An Ansible ad hoc command uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes. ad hoc commands are quick and easy, but they are not reusable.
+An Ansible ad hoc command uses the /usr/bin/ansible command-line tool to automate a single task on one or more managed nodes. ad hoc commands are
+quick and easy, but they are not reusable.
 ansible web -m ping  -b -K
 #########################play##################################
 
@@ -416,8 +433,10 @@ A playbook is a list of plays.
 Ansible Playbooks is a yml file. In playbook written some tasks with help of module and command. When we run playbook
 all task that automatically execute against hosts.
 
-ansible-playbook httpd.yml -kK  # k ask user password and K ask sudo password 
-ansible-playbook --syntax-check on all playbooks
+ansible-playbook httpd.yml -kK   # k ask user password and K ask sudo password
+
+###################use before running playbook to find error######################
+ansible-playbook httpd.yml -kK --syntax-check 
 Using the --limit parameter of the ansible-playbook command is the easiest option to limit
 ###########Playbook work#################################
 Playbooks are collections of one or more plays that are performed in a certain order. A play is an ordered sequence of tasks
@@ -427,12 +446,28 @@ and it makes them easier to reuse. The breaking of playbook allows you to logica
 
 ##################################Ansible roles#######################################
 Ansible roles allow you to develop reusable automation components by grouping and encapsulating related automation artifacts, like configuration files, templates, tasks, and handlers. Because roles isolate these components, it's easier to reuse them and share them with other people.
+```
+```
+https://www.devopsschool.com/tutorial/ansible/ansible-roles-explained-with-examples.html
+ansible-galaxy init /etc/ansible/roles/apache --offline
+
+Directory Structure:
+tasks - contains the main list of tasks to be executed by the role.
+handlers - contains handlers, which may be used by this role or even anywhere outside this role.
+defaults - default variables for the role.
+vars - other variables for the role. Vars has the higher priority than defaults.
+files - contains files required to transfer or deployed to the target machines via this role.
+templates - contains templates which can be deployed via this role.
+meta - defines some data / information about this role (author, dependency, versions, examples, etc,.)
+Lets take an example to create a role for Apache Web server.
+
 Ansible roles benefits:
 1.	Allowing easy sharing of code with others
 2.	Make larger projects more manageable
 3.	Can use community-supported roles from Ansible Galaxy
 4.	Can use rhel-system-roles as part of Red Hat Enterprise Linux
-
+```
+```
 Run role command:-   ansible-playbook httpd.yml 
 ```
 ```
@@ -565,7 +600,7 @@ Portability     Virtual machines depend on the Host OS, libraries and dependenci
 
 
 ```
-
+```
 Docker Hub is primarily used for storing and sharing Docker images. Docker Hub allows developers to build, test, and deploy Docker
  images.
 
@@ -593,6 +628,9 @@ docker-compose – This command is used to manage multi-container Docker applica
 # docker exec -ti nginx-root /bin/bash   # remote like ssh
 
 # docker run -id --name=my-website --cpus=1.5 --memory=2048m -p 80:80 -v ./website:/usr/share/nginx/html/ nginx:latest
+https://phoenixnap.com/kb/docker-volumes
+
+https://blog.devops.dev/creating-a-docker-bridge-network-a085ff8559c3
 
 https://www.mygreatlearning.com/blog/top-essential-docker-commands/
 ```
@@ -603,10 +641,31 @@ https://www.mygreatlearning.com/blog/top-essential-docker-commands/
 Docker Compose is a tool that helps you define and share multi-container applications. With Compose, you can create a YAML file to define the services and with a single command, you can spin everything up or tear it all down.
 we define a multi-container application in a single file, then spin your application up in a single command which does everything that needs to be done to get it running
 
+https://github.com/wrender/docker-compose-lamp/blob/master/docker-compose.yml
+https://medium.com/@sajjad_dehghani/php-7-3-25-apache-dockerfile-22b26ebb78d9 
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-centos-7
+
+docker-compose up -d
+docker-compose down
+docker-compose stop
+docker-compose rm 
 ```
 ```
 ##################################kubernet ############
 Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services  that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.
+
+master
+These components are the API server, etcd, scheduler, controller-manager,container runtime and cloud controller manager.
+
+The controller manager. This component is a single binary composed of four sub-processes and they are:
+
+The node controller: Responsible for the health of the nodes in the cluster. The replication controller: responsible for keeping the desired amount of pods for each replication. The endpoints controller: handles the Endpoints object that links services and pods. The service account and token controller: handles the default accounts and API access for namespaces.
+
+Client nodes
+kubelet, kubeproxy,container runtime
+
+The kubelet, which makes sure all containers are running and healthy.
+
 https://www.bluematador.com/learn/kubectl-cheatsheet  #### importtant 
 
 https://kubernetes.io/docs/concepts/overview/
