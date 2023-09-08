@@ -196,6 +196,8 @@ to run different builds on different environments each called a Slave.
 Jenkins is an open source automation server. It helps automate the parts of software development related to building,
  testing, and deploying,facilitating continuous integration and continuous delivery.it is written in Java programming
  language. default port 8080.
+#### build abort by jenkins console####################################
+Jenkins.instance.getItemByFullName("build name").getBuildByNumber(179).finish(hudson.model.Result.ABORTED, new java.io.IOException("Aborting build"));
 
 CI tools like Jenkins, TeamCity, Bamboo, GitLab, etc.
 
@@ -494,7 +496,35 @@ terraform init -migrate-state — Reconfigure a backend, and attempt to migrate 
 terraform apply --auto-approve #apply changes without being prompted to enter "yes"
 terraform destroy --auto-approve #destroy/cleanup deployment without being prompted for “yes”
 terraform plan -out plan.out #output the deployment plan to plan.out.
+```
+```
+There are two types of backends in Terraform: local and remote. The local backend stores state file on your local filesystem, while the remote backend stores it on a remote service like AWS S3, Google Cloud Storage, or Terraform Cloud.
 
+terraform init -migrate-state # migrate bekend 
+##########migrate state file in s3##########
+terraform { 
+ backend "s3" {
+    bucket                 = "terraformy"
+    key                    = "state/terraform.tfstate"
+    region                 = "us-east-1"
+    encrypt                = true
+    dynamodb_table = "terraformy_tf_lockid"
+  }
+}
+#LockID
+```
+```
+
+```
+```
+#########Terraform consists of two chief components: Terraform Core and Terraform Plugins.##########
+
+Terraform Core: This component monitors the reading and interpolation of configuration files, resource plan executions, state management features, and resource graphs. Terraform Core is made up of compiled binaries written in the Go language.
+
+Terraform Plugin: The plugins define resources for specific services, including initializing the libraries used to make API calls and authenticating infrastructure providers. As is the case with Terraform Core, Terraform Plugins are written in the Go programming language as executable binaries for either a specific server or as a provisioner.
+Providers are plugins that implement the resource types. They contain all the necessary code to authenticate and connect to a specific service, usually from a public cloud provider, on the user’s behalf. Terraform supports 100 cloud providers, including Alibaba Cloud, AWS, Azure, Google Cloud Platform, Kubernetes, and the Oracle Cloud Infrastructure.
+```
+```
 terraform refresh — Modify the state file with updated metadata containing information on the resources being managed in Terraform.
  Will not modify your infrastructure terraform show — Show the state file in a human-readable format.
 
