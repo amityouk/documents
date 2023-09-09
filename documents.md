@@ -1,3 +1,19 @@
+                        Cloud computing
+```
+Cloud computing is the on-demand availability of computer system resources, especially data storage and computing power, without direct active management by the user. Large clouds often have functions distributed over multiple locations, each of which is a data cente.
+
+There are four main types of cloud computing: private clouds (data center/on permisse/Local data center)), public clouds (AWS/gcp/azure), hybrid clouds (private+public), and multiclouds(private+public(aws+gcp)
+
+Type of pulic cloud
+IaaS vs. PaaS vs. SaaS
+
+IaaS, or infrastructure as a service, is on-demand access to cloud-hosted physical and virtual servers, storage and networking - the backend IT infrastructure for running applications and workloads in the cloud.
+
+PaaS, or platform as a service, is on-demand access to a complete, ready-to-use, cloud-hosted platform for developing, running, maintaining and managing applications.
+
+SaaS, or software as a service, is on-demand access to ready-to-use, cloud-hosted application software.
+```
+```
 ```
 https://www.simplilearn.com/tutorials/devops-tutorial/devops-tools#devops_monitoring_tools
 
