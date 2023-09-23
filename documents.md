@@ -724,31 +724,14 @@ https://codefresh.io/learn/kubernetes-deployment/top-6-kubernetes-deployment-str
 https://spot.io/resources/kubernetes-autoscaling/5-kubernetes-deployment-strategies-roll-out-like-the-pros/
 
 ```
-```
-ELB is a generic term for AWS load balancing services that have three types of attractive load balancers: ALB, CLB, and NLB.
+#################AWS Load Balancer Types#################################
+4 Types of Load Balancers in AWS
 
-Compared to CLBs, ALBs are more distinctive in many ways and have their own unique appeal.
-For example, the following points are characteristic of ALB.
+Application Load Balancers: Ideal for routing HTTP/HTTPS traffic and performing advanced traffic routing and content-based routing.
+Network Load Balancers: Designed for handling TCP/UDP traffic with high performance and low latency.
+Gateway Load Balancers: Used for deploying third-party virtual appliances, such as firewalls, intrusion detection systems, and other network appliances.
+Classic Load Balancers: An older type of load balancer that is still available for use, primarily for applications not yet migrated to the newer load balancer types.
 
-・ Operation in Layer 7 (Application Layer)
-Older ELBs acted as load balancers, both in the transport layer at layer 4 and the application layer at layer 7.
-Layer 4 balances the load without scrutinizing the contents of the network packets, and Layer 7 balances the load more efficiently by accessing information such as HTTP and HTTPS in the packets.
-
-On the other hand, ALB is a load balancer that only works with Layer 7, and unlike ELB, it has a style that specializes in the application layer.
-This has allowed for the implementation and addition of more useful and easy-to-use features and increased overall support.
-
-・ Supports WebSocket and HTTP/2
-The ALB now supports two new protocols, WebSocket and HTTP/2, which expands the user's choice.
-By supporting each communication standard, network traffic can be reduced and connections can be used more efficiently.
-
-・ Targets the latest application architectures
-When using the ALBs, you can configure them for the latest application architectures, such as micro services and containers.
-It provides advanced request routing, so you'll be able to use it more freely and smoothly.
-
-・ Can route to target groups
-An ALB can tie instances to different groups of servers, called target groups, and configure routing.
-Unlike ELBs, which are directly instantiated, services can be run independently and multiple routing rule definitions can be created.
-```
 ```
 
 
