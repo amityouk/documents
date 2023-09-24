@@ -142,7 +142,8 @@ git commit –m [type in a message] — It is used to snapshot or record a file.
 git push: sending the changes to the master branch.
 git pull: fetch the code already in the repository.
 git diff [first branch] [second branch] — it is used to display the differences present between the two branches.
-git rest [commit] — It is used to undo all the changes that have been incorporated as a part of a commit after a specified commit has taken place.
+git rest [commit] — It is used to undo all the changes that have been incorporated as a part of a commit after a specified
+ commit has taken place.
 git reset –hard [commit] — This command is used to discard all the history and takes us to the last specified commit.
 git log –follow [file] — his is similar to that of git log with the additional difference that it lists the version history for a particular file.
 git show [commit] — This is used to display the metadata and all the content related changes of a particular commit.
@@ -154,7 +155,8 @@ git status: To know the comparison between the working directories and index.
 
 
 Q1 Can you tell the difference between git pull and git fetch?
-Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target branch in your local repository. (Git pull = git fetch + git merge)
+Git pull command pulls new changes or commits from a particular branch from your central repository and updates your target
+branch in your local repository. (Git pull = git fetch + git merge)
 
 Git fetch is also used for the same purpose but it works in a slightly different way. When you perform a git fetch,
  it pulls all new commits from the desired branch and stores it in a new branch in your local repository. If you want
@@ -173,11 +175,14 @@ Q4. What is the purpose of branching and its types?
 It allows the user to switch between the branches to keep the current work in sync without disturbing master branches and other developer’s work as per their requirements.
 
 Q5. Explain about “git cherry-pick”?
-This command enables you to pick up commits from a branch within a repository and apply it to another branch. This command is useful to undo changes when any commit is accidentally made to the wrong branch. Then, you can switch to the correct branch and use this command to git cherry-pick the commit.
+This command enables you to pick up commits from a branch within a repository and apply it to another branch. This command is
+useful to undo changes when any commit is accidentally made to the wrong branch. Then, you can
+switch to the correct branch and use this command to git cherry-pick the commit.
 
 Q6. How to revert a commit that has already been pushed and made public?
 There are two processes through which you can revert a commit:
-1. Remove or fix the bad file in a new commit and push it to the remote repository. Then commit it to the remote repository using:
+1. Remove or fix the bad file in a new commit and push it to the remote repository. Then commit it to the remote
+ repository using:
 git commit –m “commit message”
 2. Create a new commit to undo all the changes that were made in the bad commit. Use the following command:
 git revert <commit id>
@@ -186,10 +191,12 @@ Q7.Explain the difference between rebasing and merge in Git?
 • Git rebase is a command that allows developers to integrate changes from one branch to another.
 • Git merge is a command that allows you to merge branches from Git.
 
-Git rebase and merge both integrate changes from one branch into another. Where they differ is how they used. Git rebase moves a feature branch into a master. Git merge adds a new commit, preserving the history.
+Git rebase and merge both integrate changes from one branch into another. Where they differ is how they used. Git
+rebase moves a feature branch into a master. Git merge adds a new commit, preserving the history.
 
 Q8.What is a git stash?
-git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else,
+and then come back and re-apply them later on.
 
 ```
 ```
